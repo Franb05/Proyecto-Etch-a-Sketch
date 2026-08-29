@@ -1,1 +1,3 @@
-const container = document.querySelector("#container");
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector("#container");
+});
