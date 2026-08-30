@@ -6,6 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
       //Creo un cuadrado y lo agrego al contenedor
       const cuadrado = document.createElement("div");
       cuadrado.classList.add("cuadrado");
+
+      cuadrado.addEventListener("mouseenter", () => {
+        cuadrado.classList.add("pintado");
+      });
+
       container.appendChild(cuadrado);
     }
   }

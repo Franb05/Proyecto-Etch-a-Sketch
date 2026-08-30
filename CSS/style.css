@@ -7,6 +7,10 @@
 .cuadrado {
   width: 40px;
   height: 40px;
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   box-sizing: border-box;
+}
+
+.pintado {
+  background-color: black;
 }
