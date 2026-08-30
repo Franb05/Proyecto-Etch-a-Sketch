@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let columna = 0; columna < 16; columna++) {
       //Creo un cuadrado y lo agrego al contenedor
       const cuadrado = document.createElement("div");
+      cuadrado.classList.add("cuadrado");
       container.appendChild(cuadrado);
     }
   }
