@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
       resultadoPrompt = Number(prompt("Introduce un numero entre 1 y 100"));
     }
 
+    container.replaceChildren();
+
     for (let fila = 0; fila < resultadoPrompt; fila++) {
       for (let columna = 0; columna < resultadoPrompt; columna++) {
         console.log(resultadoPrompt);
