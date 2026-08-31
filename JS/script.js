@@ -20,11 +20,31 @@ document.addEventListener("DOMContentLoaded", () => {
         cuadrado.style.height = `${640 / resultadoPrompt}px`;
         cuadrado.classList.add("cuadrado");
 
+        let interacciones = 0;
+        // Guardamos los valores RGB originales del cuadrado
+        let rojo;
+        let verde;
+        let azul;
+
         cuadrado.addEventListener("mouseenter", () => {
-          const rojo = Math.floor(Math.random() * 256);
-          const verde = Math.floor(Math.random() * 256);
-          const azul = Math.floor(Math.random() * 256);
-          cuadrado.style.backgroundColor = `rgb(${rojo}, ${verde}, ${azul})`;
+          interacciones++;
+
+          if (interacciones === 1) {
+            rojo = Math.floor(Math.random() * 256);
+            verde = Math.floor(Math.random() * 256);
+            azul = Math.floor(Math.random() * 256);
+          }
+
+          // Cada interacción representa un 10% más de oscurecimiento
+          const porcentaje = 1 - interacciones * 0.1;
+
+          // Reducimos cada componente RGB según el porcentaje
+          const rojoOscuro = rojo * porcentaje;
+          const verdeOscuro = verde * porcentaje;
+          const azulOscuro = azul * porcentaje;
+
+          // Aplicamos el nuevo color al cuadrado
+          cuadrado.style.backgroundColor = `rgb(${rojoOscuro}, ${verdeOscuro}, ${azulOscuro})`;
         });
 
         container.appendChild(cuadrado);
