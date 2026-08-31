@@ -21,7 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
         cuadrado.classList.add("cuadrado");
 
         cuadrado.addEventListener("mouseenter", () => {
-          cuadrado.classList.add("pintado");
+          const rojo = Math.floor(Math.random() * 256);
+          const verde = Math.floor(Math.random() * 256);
+          const azul = Math.floor(Math.random() * 256);
+          cuadrado.style.backgroundColor = `rgb(${rojo}, ${verde}, ${azul})`;
         });
 
         container.appendChild(cuadrado);
